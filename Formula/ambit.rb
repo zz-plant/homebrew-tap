@@ -1,5 +1,5 @@
 class Ambit < Formula
-  desc "The combined action space of you, your agents, and your machines"
+  desc "The meta-MCP capability graph for AI agent environments"
   homepage "https://github.com/zz-plant/ambit"
   url "https://github.com/zz-plant/ambit/archive/refs/tags/v0.4.0.tar.gz"
   version "0.4.0"
@@ -9,9 +9,10 @@ class Ambit < Formula
   def install
     system "npm", "install", "--production"
     libexec.install Dir["*"]
+    bin.install_symlink libexec/"cli.js" => "ambit"
     bin.install_symlink libexec/"cli.js" => "tt"
   end
   test do
-    system "#{bin}/tt", "--help"
+    system "#{bin}/ambit", "--help"
   end
 end
