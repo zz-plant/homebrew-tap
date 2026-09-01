@@ -1,5 +1,5 @@
 class Ambit < Formula
-  desc "The meta-MCP capability graph for AI agent environments"
+  desc "What you, your agents, and your machines can jointly do, and where time goes"
   homepage "https://github.com/zz-plant/ambit"
   url "https://github.com/zz-plant/ambit/archive/refs/tags/v0.4.1.tar.gz"
   version "0.4.1"
